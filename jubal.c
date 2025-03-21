@@ -54,6 +54,14 @@ int main(void) {
         }
     }
 
+    // For now, we are just using uniformly distributed random vectors, so let's
+    // divide up the vectors into orthants. There will be $2^n$ orthants. Let
+    // the set $X = \{0,1\}$. Each orthant maps to an element of $X^n$.
+    // Consider for example the vector in 3-space $(1,-1,-1)$. It will map to
+    // the octant denoted by "100": 1 for positive coordinate value, 0 for
+    // negative coordinate value. What if it's on the edge, like $(0,0,1)$?
+
+
     printf("The first eight coordinates of the query vector are\n[ ");
     for (i = 0; i < 8; i++) printf("%ld ", q[i]);
     printf("]\n");
